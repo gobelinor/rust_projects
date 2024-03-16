@@ -33,10 +33,10 @@ async fn main() -> () {
     // Créer un client HTTP[S]
     let client = Client::new();
    
-    //les requettes sont des tasks (handle) que l'on fait spawn avec tokio::spawn
+    //les requêtes sont des tasks (handle) que l'on fait spawn avec tokio::spawn
     //vecteur handles pour stocker les tasks "handle"
     let mut handles = vec![];
-    for i in 0.. { //wtf cest beaucoup de requetes 
+    for i in 0.. { //wtf cest beaucoup de requêtes 
         //clonage des variables (est ce necessaire ? peut etre trouver une autre façon plus opti) 
         let user_agent = user_agent.clone();
         let url = url.clone();
