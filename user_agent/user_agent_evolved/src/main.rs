@@ -1,4 +1,4 @@
-// This is a simple HTTP gateway that forwards requests to a server and modifies the User-Agent header
+// This is a simple HTTP gateway that forwards requests and modifies the User-Agent header
 // Usage: cargo run <user_agent>
 
 use hyper::service::{make_service_fn, service_fn};
