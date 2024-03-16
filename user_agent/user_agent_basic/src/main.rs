@@ -1,3 +1,4 @@
+// Envoie une requête HTTP à une URL spécifiée avec un User-Agent spécifié
 use reqwest::Client;
 use reqwest::header::USER_AGENT;
 use std::env;

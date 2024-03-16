@@ -1,10 +1,10 @@
 [package]
-name = "user_agent"
+name = "user_agent_legion"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "user_agent_to_url"
+name = "user_agent_legion"
 path = "src/main.rs"
 
 [dependencies]
