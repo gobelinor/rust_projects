@@ -38,8 +38,8 @@ async fn main() -> () {
     let mut handles = vec![];
     for i in 0.. { //wtf cest beaucoup de requêtes 
         //clonage des variables (est ce necessaire ? peut etre trouver une autre façon plus opti) 
-        // let user_agent = user_agent.clone();
-        // let url = url.clone();
+        let user_agent = user_agent.clone();
+        let url = url.clone();
         let client = client.clone();
         //creation de la task 
         let handle = tokio::spawn(async move {
@@ -50,13 +50,5 @@ async fn main() -> () {
         });
         //ajout de la task au vecteur
         handles.push(handle);
-    }
-    
-    println!("uwuwuwuwuwuwuwuwuwuwuwuwuwuwuwuwu"); //juste pour voir si c'est bien async 
-                                                   //et que le programme ne se bloque pas
-    //attente de la fin de toutes les tasks
-    //on recupere les resultats avec await.unwrap()
-    for handle in handles {
-        handle.await.unwrap();
     }
 }
